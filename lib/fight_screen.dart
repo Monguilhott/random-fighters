@@ -149,8 +149,11 @@ class _FightersState extends State<StreetFighter> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(
-                              fighterOne.icon,
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              child: Image.asset(
+                                fighterOne.icon,
+                              ),
                             ),
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -190,11 +193,14 @@ class _FightersState extends State<StreetFighter> {
                                 LifeBar(fighterTwo, true, Colors.blue),
                               ],
                             ),
-                            Transform(
-                              alignment: Alignment.center,
-                              transform: Matrix4.rotationY(pi),
-                              child: Image.asset(
-                                fighterTwo.icon,
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              child: Transform(
+                                alignment: Alignment.center,
+                                transform: Matrix4.rotationY(pi),
+                                child: Image.asset(
+                                  fighterTwo.icon,
+                                ),
                               ),
                             ),
                           ],
