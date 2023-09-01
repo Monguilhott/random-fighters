@@ -147,38 +147,56 @@ class _FightersState extends State<StreetFighter> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Row(
                           children: [
-                            Container(
-                              alignment: Alignment.centerLeft,
-                              width: 130,
-                              child: Text(fighterOne.name,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                      decoration: TextDecoration.none)),
+                            Image.asset(
+                              fighterOne.icon,
                             ),
-                            LifeBar(fighterOne, false, Colors.red),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  alignment: Alignment.centerLeft,
+                                  width: 100,
+                                  child: Text(fighterOne.name,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                          decoration: TextDecoration.none)),
+                                ),
+                                LifeBar(fighterOne, false, Colors.red),
+                              ],
+                            ),
                           ],
                         ),
                         Image.asset(
                           'assets/vs.png',
                           scale: 3,
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Row(
                           children: [
-                            Container(
-                              alignment: Alignment.centerRight,
-                              width: 130,
-                              child: Text(fighterTwo.name,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                      decoration: TextDecoration.none)),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  alignment: Alignment.centerRight,
+                                  width: 100,
+                                  child: Text(fighterTwo.name,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.white,
+                                          decoration: TextDecoration.none)),
+                                ),
+                                LifeBar(fighterTwo, true, Colors.blue),
+                              ],
                             ),
-                            LifeBar(fighterTwo, true, Colors.blue),
+                            Transform(
+                              alignment: Alignment.center,
+                              transform: Matrix4.rotationY(pi),
+                              child: Image.asset(
+                                fighterTwo.icon,
+                              ),
+                            ),
                           ],
                         ),
                       ],

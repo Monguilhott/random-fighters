@@ -15,7 +15,7 @@ class LifeBar extends StatelessWidget{
     return Column(
       children: [
         SizedBox(
-            width: 130,
+            width: 100,
             height: 12,
           child: Transform(
             alignment: Alignment.center,
