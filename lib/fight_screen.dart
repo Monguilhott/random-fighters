@@ -3,6 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:street_fighter/scenarios_list.dart';
 import 'package:street_fighter/fighters_list.dart';
+import 'fighters_area.dart';
 import 'life_bar.dart';
 import 'custom_button.dart';
 import 'fight_log.dart';
@@ -209,28 +210,7 @@ class _FightersState extends State<StreetFighter> {
                     ),
                   ),
                 ),
-                Container(
-                  //color: Colors.red.withOpacity(0.5),
-                  height: 470,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Image.asset(
-                        fighterOne.image,
-                        scale: 0.45,
-                      ),
-                      Transform(
-                        alignment: Alignment.center,
-                        transform: Matrix4.rotationY(pi),
-                        child: Image.asset(
-                          fighterTwo.image,
-                          scale: 0.45,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                FightersArea(fighterOne, fighterTwo),
                 const CustomButton(),
               ],
             ),

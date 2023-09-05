@@ -65,46 +65,7 @@ flutter:
   assets:
     - assets/audios/
     - assets/icons/
-    - assets/background01.gif
-    - assets/background02.gif
-    - assets/background03.gif
-    - assets/background04.gif
-    - assets/background05.gif
-    - assets/background06.gif
-    - assets/background07.gif
-    - assets/akuma.gif
-    - assets/balrog.gif
-    - assets/bison.gif
-    - assets/choi.gif
-    - assets/chunli.gif
-    - assets/dan.gif
-    - assets/demitri.gif
-    - assets/dhalsim.gif
-    - assets/earthquake.gif
-    - assets/geese.gif
-    - assets/genjuro.gif
-    - assets/goenitz.gif
-    - assets/guile.gif
-    - assets/honki.gif
-    - assets/hugo.gif
-    - assets/iori.gif
-    - assets/kasumi.gif
-    - assets/ken.gif
-    - assets/kim.gif
-    - assets/kyo.gif
-    - assets/mai.gif
-    - assets/mrkarate.gif
-    - assets/ryo.gif
-    - assets/ryu.gif
-    - assets/sagat.gif
-    - assets/shiki.gif
-    - assets/shinakuma.gif
-    - assets/terry.gif
-    - assets/tessa.gif
-    - assets/vega.gif
-    - assets/violentken.gif
-    - assets/wildiori.gif
-    - assets/vs.png
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
