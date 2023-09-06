@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:street_fighter/scenarios_list.dart';
-import 'fight_text_area.dart';
-import 'fighters_area.dart';
-import 'custom_button.dart';
-import 'fight_log.dart';
-import 'fighter.dart';
-import 'life_bar_area.dart';
+import 'package:street_fighter/model/scenarios_list.dart';
+import '../controller/custom_button_back.dart';
+import '../controller/fight_text_area.dart';
+import '../controller/fighters_area.dart';
+import '../controller/fight_log.dart';
+import '../model/fighter.dart';
+import '../controller/life_bar_area.dart';
 
 class StreetFighter extends StatelessWidget {
   const StreetFighter(this.fighterOne, this.fighterTwo, this.selectedScenario, {super.key});
@@ -26,11 +26,12 @@ class StreetFighter extends StatelessWidget {
             )),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const CustomButtonBack(),
                 FightTextArea(fighterOne, fighterTwo, snapshot.data?.join() ?? ''),
                 LifeBarArea(fighterOne, fighterTwo),
                 FightersArea(fighterOne, fighterTwo),
-                const CustomButton(),
               ],
             ),
           );

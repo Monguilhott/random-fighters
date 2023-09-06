@@ -1,4 +1,4 @@
-import 'fighter.dart';
+import '../model/fighter.dart';
 
 Stream<List<String>> fightLog(Fighter one, Fighter two) async* {
   final history = [

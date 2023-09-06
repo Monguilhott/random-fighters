@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:restart_app/restart_app.dart';
+import 'package:street_fighter/model/scenarios_list.dart';
+import '../view/fight_screen.dart';
+import '../model/fighter.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  const CustomButton(this.fighterOne, this.fighterTwo, this.selectedScenario, {super.key});
+  final Fighter fighterOne;
+  final Fighter fighterTwo;
+  final Scenarios selectedScenario;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +20,7 @@ class CustomButton extends StatelessWidget {
           Center(
             child: GestureDetector(
               onTap: () {
-                Restart.restartApp();
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => StreetFighter(fighterOne, fighterTwo, selectedScenario)));
               },
               child: Container(
                 height: 40,
@@ -40,12 +45,12 @@ class CustomButton extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.restart_alt,
+                      Icons.sports_mma,
                       size: 25.0,
                       color: Colors.white,
                     ),
                     Text(
-                      ' NEW FIGHT',
+                      'FIGHT',
                       style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,

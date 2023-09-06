@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'fighter.dart';
+import '../model/fighter.dart';
 
 
 class LifeBar extends StatelessWidget{

@@ -8,6 +8,8 @@ class Fighter {
   int specialAttack = Random().nextInt(6) + 15;
   String image;
   String icon;
+  String iconSelectScreen;
+  int id;
 
   String attacked(int damage, Fighter boneco) {
     String log = '';
@@ -50,5 +52,5 @@ class Fighter {
 
   String died(Fighter boneco) => ' &\n &\n $name morreu e ${boneco.name} venceu!';
 
-  Fighter(this.name, this.image, this.icon);
+  Fighter(this.name, this.image, this.icon, this.iconSelectScreen, this.id);
 }

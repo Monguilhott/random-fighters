@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:street_fighter/fighter.dart';
+import 'package:street_fighter/model/fighter.dart';
 import 'life_bar.dart';
 
 class LifeBarArea extends StatelessWidget {

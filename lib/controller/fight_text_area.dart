@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:street_fighter/fighter.dart';
+import 'package:street_fighter/model/fighter.dart';
 
 class FightTextArea extends StatelessWidget {
   const FightTextArea(this.fighterOne, this.fighterTwo, this.fightLog, {super.key});
@@ -75,7 +75,7 @@ class FightTextArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, top: 16),
+      padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
       child: Container(
         height: 200,
         width: 450,
