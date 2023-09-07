@@ -1,7 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:street_fighter/controller/fighter_selection_random_box.dart';
-import 'package:street_fighter/model/fighters_list.dart';
 import 'package:street_fighter/model/scenarios_list.dart';
 import '../controller/custom_button.dart';
 import '../controller/fight_log.dart';
@@ -9,7 +7,10 @@ import '../model/fighter.dart';
 import '../controller/fighter_selection_box.dart';
 
 class FighterSelectionScreen extends StatefulWidget {
-  const FighterSelectionScreen(this.fighterOne, this.fighterTwo, this.selectedScenario, {super.key});
+  const FighterSelectionScreen(
+      this.fighterOne, this.fighterTwo, this.selectedScenario,
+      {super.key});
+
   final Fighter fighterOne;
   final Fighter fighterTwo;
   final Scenarios selectedScenario;
@@ -19,16 +20,6 @@ class FighterSelectionScreen extends StatefulWidget {
 }
 
 class _FighterSelectionScreenState extends State<FighterSelectionScreen> {
-  String BuscarId(int idNumber) {
-    String id = '';
-    for (int i = 0; i <= fighters.length; i++) {
-      if (fighters[i].iconSelectScreen == idNumber) {
-        id = fighters[i].iconSelectScreen;
-      }
-    }
-    return id;
-  }
-
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<List<String>>(
@@ -53,69 +44,8 @@ class _FighterSelectionScreenState extends State<FighterSelectionScreen> {
                         fontSize: 25),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionRandomBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                          FighterSelectionBox(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
+                const Expanded(child: FighterSelectionBox()),
+                SizedBox(
                   height: 350,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -136,7 +66,8 @@ class _FighterSelectionScreenState extends State<FighterSelectionScreen> {
                     ],
                   ),
                 ),
-                CustomButton(widget.fighterOne, widget.fighterTwo, widget.selectedScenario),
+                CustomButton(widget.fighterOne, widget.fighterTwo,
+                    widget.selectedScenario),
               ],
             ),
           );
