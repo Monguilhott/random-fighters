@@ -9,7 +9,7 @@ class CustomButtonBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 12, top: 12),
+      padding: const EdgeInsets.only(top: 12),
       child: Column(
         children: [
           GestureDetector(
@@ -20,7 +20,6 @@ class CustomButtonBack extends StatelessWidget {
               height: 40,
               width: 120,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 2),
                   borderRadius: BorderRadius.circular(12.0),
                   ),
               child: const Row(

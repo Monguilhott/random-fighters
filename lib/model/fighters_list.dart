@@ -27,7 +27,8 @@ List<Fighter> fighters = [
   Fighter('Dhalsim', 'assets/dhalsim.gif', 'assets/icons/icondhalsim.png', 'assets/icons/select_screen/dhalsim_ss.png'),
   Fighter('Honki', 'assets/honki.gif', 'assets/icons/iconmrkarate.png', 'assets/icons/select_screen/geese_ss.png'),
   Fighter('Tessa', 'assets/tessa.gif', 'assets/icons/icontessa.png', 'assets/icons/select_screen/tessa_ss.png'),
-  Fighter('Tessa', 'assets/tessa.gif', 'assets/icons/icontessa.png', 'assets/icons/select_screen/tessa_ss.png'),
+  Fighter('Kasumi', 'assets/kasumi.gif', 'assets/icons/kasumi.png', 'assets/icons/select_screen/kasumi_ss.png'),
   Fighter('Shinakuma', 'assets/shinakuma.gif', 'assets/icons/iconshinakuma.png', 'assets/icons/select_screen/shinakuma_ss.png'),
   Fighter('Demitri', 'assets/demitri.gif', 'assets/icons/icondemitri.png', 'assets/icons/select_screen/demitri_ss.png'),
+  Fighter('Ryu', 'assets/ryu.gif', 'assets/icons/iconryu.png', 'assets/icons/select_screen/random_ss.png'),
 ];
