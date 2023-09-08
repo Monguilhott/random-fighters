@@ -25,7 +25,7 @@ List<Fighter> fighters = [
   Fighter('ViolentKen', 'assets/violentken.gif', 'assets/icons/iconviolentken.png', 'assets/icons/select_screen/violentken_ss.png'),
   Fighter('Vega', 'assets/vega.gif', 'assets/icons/iconvega.png', 'assets/icons/select_screen/vega_ss.png'),
   Fighter('Dhalsim', 'assets/dhalsim.gif', 'assets/icons/icondhalsim.png', 'assets/icons/select_screen/dhalsim_ss.png'),
-  Fighter('Honki', 'assets/honki.gif', 'assets/icons/iconmrkarate.png', 'assets/icons/select_screen/geese_ss.png'),
+  Fighter('Honki', 'assets/honki.gif', 'assets/icons/iconmrkarate.png', 'assets/icons/select_screen/mrkarate_ss.png'),
   Fighter('Tessa', 'assets/tessa.gif', 'assets/icons/icontessa.png', 'assets/icons/select_screen/tessa_ss.png'),
   Fighter('Kasumi', 'assets/kasumi.gif', 'assets/icons/kasumi.png', 'assets/icons/select_screen/kasumi_ss.png'),
   Fighter('Shinakuma', 'assets/shinakuma.gif', 'assets/icons/iconshinakuma.png', 'assets/icons/select_screen/shinakuma_ss.png'),

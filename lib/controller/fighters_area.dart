@@ -9,28 +9,25 @@ class FightersArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 38),
-      child: SizedBox(
-        height: 450,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Image.asset(
-              fighterOne.image,
+    return SizedBox(
+      height: 350,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Image.asset(
+            fighterOne.image,
+            scale: 0.45,
+          ),
+          Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.rotationY(pi),
+            child: Image.asset(
+              fighterTwo.image,
               scale: 0.45,
             ),
-            Transform(
-              alignment: Alignment.center,
-              transform: Matrix4.rotationY(pi),
-              child: Image.asset(
-                fighterTwo.image,
-                scale: 0.45,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

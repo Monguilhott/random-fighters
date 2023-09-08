@@ -32,6 +32,9 @@ class StreetFighter extends StatelessWidget {
                 FightTextArea(fighterOne, fighterTwo, snapshot.data?.join() ?? ''),
                 LifeBarArea(fighterOne, fighterTwo),
                 FightersArea(fighterOne, fighterTwo),
+                Container(
+                  height: 38,
+                )
               ],
             ),
           );

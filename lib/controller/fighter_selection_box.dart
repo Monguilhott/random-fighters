@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
+import '../model/fighter.dart';
 import '../model/fighters_list.dart';
 
+typedef OnFighterSelected = void Function(Fighter fighter);
+
 class FighterSelectionBox extends StatelessWidget {
-  const FighterSelectionBox({super.key});
+  final OnFighterSelected onFighterSelected;
+  const FighterSelectionBox(this.onFighterSelected, {super.key});
 
   @override
   Widget build(BuildContext context) {
 
     return Padding(
       padding: const EdgeInsets.all(2.0),
-      child: GestureDetector(
-        onTap: () {
-
-        },
-        child: GridView.builder(
-          itemCount: fighters.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
-          itemBuilder: (ctx, index){
-            final fighterInfo = fighters[index];
-            return Padding(
+      child: GridView.builder(
+        itemCount: fighters.length,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
+        itemBuilder: (ctx, index){
+          var fighterInfo = fighters[index];
+          return GestureDetector(
+            onTap: () {
+              onFighterSelected(fighterInfo);
+            },
+            child: Padding(
               padding: const EdgeInsets.all(3.0),
               child: SizedBox(
                 height: 70,
@@ -26,9 +30,9 @@ class FighterSelectionBox extends StatelessWidget {
                 child: Image.asset(fighterInfo.iconSelectScreen,
                     fit: BoxFit.fitWidth),
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }
