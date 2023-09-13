@@ -4,27 +4,48 @@ import '../model/fighters_list.dart';
 
 typedef OnFighterSelected = void Function(Fighter fighter);
 
-class FighterSelectionBox extends StatelessWidget {
+class FighterSelectionBox extends StatefulWidget {
   final OnFighterSelected onFighterSelected;
+
   const FighterSelectionBox(this.onFighterSelected, {super.key});
 
   @override
-  Widget build(BuildContext context) {
+  State<FighterSelectionBox> createState() => _FighterSelectionBoxState();
+}
 
+class _FighterSelectionBoxState extends State<FighterSelectionBox> {
+  bool charOneSelected = false;
+  bool charTwoSelected = false;
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: GridView.builder(
         itemCount: fighters.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
-        itemBuilder: (ctx, index){
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
+        itemBuilder: (ctx, index) {
           var fighterInfo = fighters[index];
           return GestureDetector(
             onTap: () {
-              onFighterSelected(fighterInfo);
+              if (!charOneSelected){
+                charOneSelected = true;
+                widget.onFighterSelected(fighterInfo);
+                fighterInfo.bordaAtiva = true;
+              }
+              if (charOneSelected && !charTwoSelected){
+                charTwoSelected = true;
+                widget.onFighterSelected(fighterInfo);
+                fighterInfo.bordaAtiva = true;
+              }
             },
             child: Padding(
               padding: const EdgeInsets.all(3.0),
-              child: SizedBox(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(width: 3.0, color: fighterInfo.bordaAtiva ? Colors.red : Colors.transparent)
+                ),
                 height: 70,
                 width: 70,
                 child: Image.asset(fighterInfo.iconSelectScreen,
