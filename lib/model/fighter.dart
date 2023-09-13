@@ -9,7 +9,7 @@ class Fighter {
   String image;
   String icon;
   String iconSelectScreen;
-  bool bordaAtiva;
+  bool borderActivated;
 
   String attacked(int damage, Fighter boneco) {
     String log = '';
@@ -52,5 +52,5 @@ class Fighter {
 
   String died(Fighter boneco) => ' &\n &\n $name morreu e ${boneco.name} venceu!';
 
-  Fighter(this.name, this.image, this.icon, this.iconSelectScreen, {this.bordaAtiva = false});
+  Fighter(this.name, this.image, this.icon, this.iconSelectScreen, {this.borderActivated = false});
 }

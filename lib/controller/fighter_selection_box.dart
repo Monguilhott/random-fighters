@@ -29,17 +29,16 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
         itemBuilder: (ctx, index) {
           var fighterInfo = fighters[index];
-          var fighterInfoTwo = fighters[index];
           return GestureDetector(
             onTap: () {
               if (!charOneSelected) {
                 charOneSelected = true;
                 widget.onFighterSelectedOne(fighterInfo);
-                fighterInfo.bordaAtiva = true;
+                fighterInfo.borderActivated = true;
               } else if (charOneSelected && !charTwoSelected) {
                 charTwoSelected = true;
-                widget.onFighterSelectedTwo(fighterInfoTwo);
-                fighterInfoTwo.bordaAtiva = true;
+                widget.onFighterSelectedTwo(fighterInfo);
+                fighterInfo.borderActivated = true;
               }
             },
             child: Padding(
@@ -50,13 +49,13 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
                 decoration: BoxDecoration(
                   border: Border.all(
                       width: 3.0,
-                      color: fighterInfo.bordaAtiva
+                      color: fighterInfo.borderActivated
                           ? Colors.red
                           : Colors.transparent),
                   image: DecorationImage(
                     image: AssetImage(fighterInfo.iconSelectScreen),
                     fit: BoxFit.fitWidth,
-                    colorFilter: fighterInfo.bordaAtiva
+                    colorFilter: fighterInfo.borderActivated
                         ? const ColorFilter.mode(
                             Colors.red, BlendMode.modulate)
                         : const ColorFilter.mode(
