@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:street_fighter/model/scenarios_list.dart';
 import '../main.dart';
-import '../model/fighter.dart';
 
 class CustomButtonBack extends StatelessWidget {
   const CustomButtonBack({super.key});

@@ -29,9 +29,15 @@ class _FighterSelectionScreenState extends State<FighterSelectionScreen> {
     fighterTwo = widget.fighterTwo;
   }
 
-  void _onFighterSelected(Fighter fighter){
+  void _onFighterSelectedOne(Fighter fighter){
     setState(() {
       fighterOne = fighter;
+    });
+  }
+
+  void _onFighterSelectedTwo(Fighter fighter){
+    setState(() {
+      fighterTwo = fighter;
     });
   }
 
@@ -57,7 +63,7 @@ class _FighterSelectionScreenState extends State<FighterSelectionScreen> {
                   fontSize: 25),
             ),
           ),
-          Expanded(child: FighterSelectionBox(_onFighterSelected)),
+          Expanded(child: FighterSelectionBox(_onFighterSelectedOne, _onFighterSelectedTwo)),
           FightersArea(fighterOne, fighterTwo),
           CustomButton(fighterOne, fighterTwo,
               widget.selectedScenario),

@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import '../model/fighter.dart';
 import '../model/fighters_list.dart';
 
-typedef OnFighterSelected = void Function(Fighter fighter);
+typedef OnFighterSelectedOne = void Function(Fighter fighter);
+typedef OnFighterSelectedTwo = void Function(Fighter fighter);
 
 class FighterSelectionBox extends StatefulWidget {
-  final OnFighterSelected onFighterSelected;
+  final OnFighterSelectedOne onFighterSelectedOne;
+  final OnFighterSelectedTwo onFighterSelectedTwo;
 
-  const FighterSelectionBox(this.onFighterSelected, {super.key});
+  const FighterSelectionBox(this.onFighterSelectedOne, this.onFighterSelectedTwo, {super.key});
 
   @override
   State<FighterSelectionBox> createState() => _FighterSelectionBoxState();
@@ -27,17 +29,17 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
         itemBuilder: (ctx, index) {
           var fighterInfo = fighters[index];
+          var fighterInfoTwo = fighters[index];
           return GestureDetector(
             onTap: () {
               if (!charOneSelected) {
                 charOneSelected = true;
-                widget.onFighterSelected(fighterInfo);
+                widget.onFighterSelectedOne(fighterInfo);
                 fighterInfo.bordaAtiva = true;
-              }
-              if (charOneSelected && !charTwoSelected) {
+              } else if (charOneSelected && !charTwoSelected) {
                 charTwoSelected = true;
-                widget.onFighterSelected(fighterInfo);
-                fighterInfo.bordaAtiva = true;
+                widget.onFighterSelectedTwo(fighterInfoTwo);
+                fighterInfoTwo.bordaAtiva = true;
               }
             },
             child: Padding(
