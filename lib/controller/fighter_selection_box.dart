@@ -29,12 +29,12 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
           var fighterInfo = fighters[index];
           return GestureDetector(
             onTap: () {
-              if (!charOneSelected){
+              if (!charOneSelected) {
                 charOneSelected = true;
                 widget.onFighterSelected(fighterInfo);
                 fighterInfo.bordaAtiva = true;
               }
-              if (charOneSelected && !charTwoSelected){
+              if (charOneSelected && !charTwoSelected) {
                 charTwoSelected = true;
                 widget.onFighterSelected(fighterInfo);
                 fighterInfo.bordaAtiva = true;
@@ -43,13 +43,24 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
             child: Padding(
               padding: const EdgeInsets.all(3.0),
               child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(width: 3.0, color: fighterInfo.bordaAtiva ? Colors.red : Colors.transparent)
-                ),
                 height: 70,
                 width: 70,
-                child: Image.asset(fighterInfo.iconSelectScreen,
-                    fit: BoxFit.fitWidth),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      width: 3.0,
+                      color: fighterInfo.bordaAtiva
+                          ? Colors.red
+                          : Colors.transparent),
+                  image: DecorationImage(
+                    image: AssetImage(fighterInfo.iconSelectScreen),
+                    fit: BoxFit.fitWidth,
+                    colorFilter: fighterInfo.bordaAtiva
+                        ? const ColorFilter.mode(
+                            Colors.red, BlendMode.modulate)
+                        : const ColorFilter.mode(
+                            Colors.transparent, BlendMode.color),
+                  ),
+                ),
               ),
             ),
           );
