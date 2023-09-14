@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import '../model/fighter.dart';
 import '../model/fighters_list.dart';
@@ -9,21 +10,44 @@ class FighterSelectionBox extends StatefulWidget {
   final OnFighterSelectedOne onFighterSelectedOne;
   final OnFighterSelectedTwo onFighterSelectedTwo;
 
-  const FighterSelectionBox(this.onFighterSelectedOne, this.onFighterSelectedTwo, {super.key});
+  const FighterSelectionBox(
+      this.onFighterSelectedOne, this.onFighterSelectedTwo,
+      {super.key});
 
   @override
   State<FighterSelectionBox> createState() => _FighterSelectionBoxState();
 }
 
 class _FighterSelectionBoxState extends State<FighterSelectionBox> {
-  bool charOneSelected = false;
-  bool charTwoSelected = false;
+  Fighter? fighterOne;
+  Fighter? fighterTwo;
+
+  Color _getBorderColor(Fighter fighter){
+    if(fighter.name == fighterOne?.name){
+      return Colors.red;
+    }
+    if(fighter.name == fighterTwo?.name){
+      return Colors.blue;
+    }
+    return Colors.transparent;
+  }
+
+  ColorFilter _getColorFilter(Fighter fighter){
+    if(fighter.name == fighterOne?.name){
+      return const ColorFilter.mode(Colors.red, BlendMode.modulate);
+    }
+    if(fighter.name == fighterTwo?.name){
+      return const ColorFilter.mode(Colors.blue, BlendMode.modulate);
+    }
+    return const ColorFilter.mode(Colors.transparent, BlendMode.color);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: GridView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: fighters.length,
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
@@ -31,14 +55,20 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
           var fighterInfo = fighters[index];
           return GestureDetector(
             onTap: () {
-              if (!charOneSelected) {
-                charOneSelected = true;
+              if (index == fighters.length - 1){
+                var randomIndex = Random().nextInt(fighters.length - 2);
+                fighterInfo = fighters[randomIndex];
+              }
+              if (fighterOne == null) {
                 widget.onFighterSelectedOne(fighterInfo);
-                fighterInfo.borderActivated = true;
-              } else if (charOneSelected && !charTwoSelected) {
-                charTwoSelected = true;
+                setState(() {
+                  fighterOne = fighterInfo;
+                });
+              } else if (fighterOne != null && fighterTwo == null) {
                 widget.onFighterSelectedTwo(fighterInfo);
-                fighterInfo.borderActivated = true;
+                setState(() {
+                  fighterTwo = fighterInfo;
+                });
               }
             },
             child: Padding(
@@ -49,17 +79,11 @@ class _FighterSelectionBoxState extends State<FighterSelectionBox> {
                 decoration: BoxDecoration(
                   border: Border.all(
                       width: 3.0,
-                      color: fighterInfo.borderActivated
-                          ? Colors.red
-                          : Colors.transparent),
+                      color: _getBorderColor(fighterInfo)),
                   image: DecorationImage(
                     image: AssetImage(fighterInfo.iconSelectScreen),
                     fit: BoxFit.fitWidth,
-                    colorFilter: fighterInfo.borderActivated
-                        ? const ColorFilter.mode(
-                            Colors.red, BlendMode.modulate)
-                        : const ColorFilter.mode(
-                            Colors.transparent, BlendMode.color),
+                    colorFilter: _getColorFilter(fighterInfo),
                   ),
                 ),
               ),

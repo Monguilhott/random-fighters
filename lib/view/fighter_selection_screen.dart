@@ -22,6 +22,7 @@ class _FighterSelectionScreenState extends State<FighterSelectionScreen> {
   late Fighter fighterOne;
   late Fighter fighterTwo;
 
+
   @override
   void initState() {
     super.initState();
