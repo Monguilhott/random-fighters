@@ -30,5 +30,5 @@ List<Fighter> fighters = [
   Fighter('Kasumi', 'assets/kasumi.gif', 'assets/icons/kasumi.png', 'assets/icons/select_screen/kasumi_ss.png'),
   Fighter('Shinakuma', 'assets/shinakuma.gif', 'assets/icons/iconshinakuma.png', 'assets/icons/select_screen/shinakuma_ss.png'),
   Fighter('Demitri', 'assets/demitri.gif', 'assets/icons/icondemitri.png', 'assets/icons/select_screen/demitri_ss.png'),
-  Fighter('Ryu', 'assets/ryu.gif', 'assets/icons/iconryu.png', 'assets/icons/select_screen/random_ss.png'),
+  Fighter('Random', 'assets/ryu.gif', 'assets/icons/iconryu.png', 'assets/icons/select_screen/random_ss.png'),
 ];
