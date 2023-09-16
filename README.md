@@ -1,7 +1,9 @@
 # Flutter Project - Flutter Fighters
 
+
 ## Introduction
 This is a documentation document for the Flutter project of a simple character fight game. The app consists of two main screens: the character selection screen and the fight screen. Players can choose two characters to battle, or random characters will be automatically selected for them. The fight occurs textually, with two types of attacks available: basic attack and special attack. Additionally, the fight scenarios are randomized.
+
 
 ## Usage
 ### Character Selection Screen
@@ -11,6 +13,7 @@ This is a documentation document for the Flutter project of a simple character f
 1. Upon launching the application, you will be directed to the character selection screen.
 2. You can choose two characters by tapping on them. If you don't want to choose, the app will randomly select two characters for you.
 3. After selecting the characters, click the "Fight" button to start the battle.
+
 
 ### Fight Screen
 1. On the fight screen, you will see the textual representation of the battle between the two selected characters.
@@ -22,6 +25,7 @@ This is a documentation document for the Flutter project of a simple character f
 5. The battle continues until one of the characters is defeated (reaches 0 health).
 6. After the battle concludes, you will see the battle result, indicating the winner.
 
+
 ## Dependencies
 This project uses the following main dependencies:
 
@@ -30,11 +34,14 @@ This project uses the following main dependencies:
 
 Make sure you have Flutter installed on your machine before running the project.
 
+
 ## Contribution
 If you wish to contribute to this project, feel free to create pull requests or report issues on the GitHub repository.
 
+
 ## License
 This project is licensed under [Your License](LICENSE-URL), and you are free to use it according to the terms of the license.
+
 
 ## Contact
 To get in touch with the developers or for more information about the project, you can reach Mauricio at m.monguilhott@gmail.com.
