@@ -25,13 +25,10 @@ This is a documentation document for the Flutter project of a simple character f
 ## Dependencies
 This project uses the following main dependencies:
 
-- [Flutter](https://flutter.dev/): A cross-platform mobile application development framework.
-- [Other dependencies, if any...]
+- [Flutter](https://flutter.dev/): Um framework de desenvolvimento de aplicativos móveis multiplataforma baseado em Dart.
+- [Dart](https://dart.dev/): A linguagem de programação utilizada pelo Flutter para o desenvolvimento de aplicativos.
 
 Make sure you have Flutter installed on your machine before running the project.
-
-## Contribution
-If you wish to contribute to this project, feel free to create pull requests or report issues on the GitHub repository.
 
 ## License
 This project is licensed under [Your License](LICENSE-URL), and you are free to use it according to the terms of the license.
