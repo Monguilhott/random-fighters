@@ -5,6 +5,7 @@ Praticando dart atraves de um joguinho de luta aleatoria
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+![readme_player_select](https://github.com/Monguilhott/random-fighters/assets/34020950/b3c9195c-e340-4875-8ff8-64237070147f)
 
 A few resources to get you started if this is your first Flutter project:
 
