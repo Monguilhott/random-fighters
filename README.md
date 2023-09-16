@@ -25,8 +25,8 @@ This is a documentation document for the Flutter project of a simple character f
 ## Dependencies
 This project uses the following main dependencies:
 
-- [Flutter](https://flutter.dev/): Um framework de desenvolvimento de aplicativos móveis multiplataforma baseado em Dart.
-- [Dart](https://dart.dev/): A linguagem de programação utilizada pelo Flutter para o desenvolvimento de aplicativos.
+- [Flutter](https://flutter.dev/): A cross-platform mobile application development framework based on Dart.
+- [Dart](https://dart.dev/): The programming language used by Flutter for app development.
 
 Make sure you have Flutter installed on your machine before running the project.
 
