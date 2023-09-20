@@ -14,7 +14,7 @@ This is a documentation document for the Flutter project of a simple character f
 
 ### Fight Screen
 
-![readme_fight_screen](https://github.com/Monguilhott/random-fighters/assets/34020950/38078ff4-2d2c-43d4-8f15-257f99ed10b2)
+![readmefightscreen](https://github.com/Monguilhott/random-fighters/assets/34020950/e0d2cf20-38c7-475a-8af8-ceacafc4f14a)
 
 1. On the fight screen, you will see the textual representation of the battle between the two selected characters.
 2. The battle consists of rounds of attacks, with each character taking turns to attack.
