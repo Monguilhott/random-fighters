@@ -6,7 +6,7 @@ This is a documentation document for the Flutter project of a simple character f
 ## Usage
 ### Character Selection Screen
 
-![readme_player_select](https://github.com/Monguilhott/random-fighters/assets/34020950/b3c9195c-e340-4875-8ff8-64237070147f)
+![readmeplayerselect](https://github.com/Monguilhott/random-fighters/assets/34020950/dd7829a9-23dc-473f-afb1-f20f82c7dac1)
 
 1. Upon launching the application, you will be directed to the character selection screen.
 2. You can choose two characters by tapping on them. If you don't want to choose, the app will randomly select two characters for you.
