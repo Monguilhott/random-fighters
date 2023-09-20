@@ -1,4 +1,4 @@
-# Flutter Project - Flutter Fighters
+# Flutter Project - Random Fighters
 
 ## Introduction
 This is a documentation document for the Flutter project of a simple character fight game. The app consists of two main screens: the character selection screen and the fight screen. Players can choose two characters to battle, or random characters will be automatically selected for them. The fight occurs textually, with two types of attacks available: basic attack and special attack. Additionally, the fight scenarios are randomized.
