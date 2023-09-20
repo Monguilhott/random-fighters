@@ -13,6 +13,9 @@ This is a documentation document for the Flutter project of a simple character f
 3. After selecting the characters, click the "Fight" button to start the battle.
 
 ### Fight Screen
+
+![readme_fight_screen](https://github.com/Monguilhott/random-fighters/assets/34020950/afbff6af-e74b-4f0c-b37d-42b7ac44eb36)
+
 1. On the fight screen, you will see the textual representation of the battle between the two selected characters.
 2. The battle consists of rounds of attacks, with each character taking turns to attack.
 3. There are two types of attacks:
