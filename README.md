@@ -24,17 +24,3 @@ This is a documentation document for the Flutter project of a simple character f
 4. The fight scenarios are randomly selected for each match, making each battle unique.
 5. The battle continues until one of the characters is defeated (reaches 0 health).
 6. After the battle concludes, you will see the battle result, indicating the winner.
-
-## Dependencies
-This project uses the following main dependencies:
-
-- [Flutter](https://flutter.dev/): A cross-platform mobile application development framework based on Dart.
-- [Dart](https://dart.dev/): The programming language used by Flutter for app development.
-
-Make sure you have Flutter installed on your machine before running the project.
-
-## License
-This project is licensed under [Your License](LICENSE-URL), and you are free to use it according to the terms of the license.
-
-## Contact
-To get in touch with the developers or for more information about the project, you can reach Mauricio at m.monguilhott@gmail.com.
