@@ -17,9 +17,9 @@ class Fighter {
       boneco.attack = Random().nextInt(10);
       boneco.specialAttack = Random().nextInt(6) + 15;
       if (damage == 0) {
-        log = ' &\n${boneco.name} errou o ataque!';
+        log = ' &\n${boneco.name} missed the attack!';
       } else {
-        log = ' &\n${boneco.name} atacou e deu $damage de dano!';
+        log = ' &\n${boneco.name} attacked and dealt $damage damage!';
       }
       life -= damage;
       if (life <= 0) {
@@ -36,10 +36,8 @@ class Fighter {
     if (boneco.life > 0) {
       int roleta = Random().nextInt(10);
       if (roleta <= 7) {
-        //print('Ataque Basico');
         return attack;
       } else {
-        //print('Ataque Especial');
         return specialAttack;
       }
     } else {
@@ -47,9 +45,9 @@ class Fighter {
     }
   }
 
-  String lifeAlert() => ' &\n$name está com $life de vida!';
+  String lifeAlert() => ' &\n$name has $life life points!';
 
-  String died(Fighter boneco) => ' &\n &\n $name morreu e ${boneco.name} venceu!';
+  String died(Fighter boneco) => ' &\n &\n $name died and ${boneco.name} won!';
 
   Fighter(this.name, this.image, this.icon, this.iconSelectScreen);
 }
